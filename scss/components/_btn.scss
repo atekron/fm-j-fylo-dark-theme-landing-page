@@ -1,0 +1,16 @@
+.btn {
+  padding: 1.4rem 2rem;
+  width: 60%;
+  min-width: fit-content;
+  max-width: 20rem;
+  color: white;
+  font-size: 1rem;
+  font-weight: 700;
+  background: linear-gradient(to right, $accent-cyan, $accent-blue);
+  border: none;
+  border-radius: 5rem;
+  cursor: pointer;
+  &:hover {
+    filter: brightness(140%);
+  }
+}

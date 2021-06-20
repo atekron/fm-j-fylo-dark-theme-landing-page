@@ -1,4 +1,5 @@
 .header {
+  @include imageTitleText;
   text-align: center;
   &__image {
     margin-bottom: -4rem;
@@ -7,14 +8,5 @@
     background-repeat: no-repeat;
     background-position: bottom left;
     background-size: 100% auto;
-    img {
-      display: block;
-      width: 100%;
-      height: auto;
-    }
-  }
-
-  &__title {
-    margin-top: 2rem;
   }
 }

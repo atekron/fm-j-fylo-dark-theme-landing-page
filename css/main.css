@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,700;1,400&family=Raleway:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;700&display=swap");
 *,
 ::after,
 ::before {
@@ -13,14 +13,101 @@ a {
   color: inherit;
 }
 
+.btn {
+  padding: 1.4rem 2rem;
+  width: 60%;
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  max-width: 20rem;
+  color: white;
+  font-size: 1rem;
+  font-weight: 700;
+  background: -webkit-gradient(linear, left top, right top, from(#65e2d9), to(#339ecc));
+  background: linear-gradient(to right, #65e2d9, #339ecc);
+  border: none;
+  border-radius: 5rem;
+  cursor: pointer;
+}
+
+.btn:hover {
+  -webkit-filter: brightness(140%);
+          filter: brightness(140%);
+}
+
 .navbar {
   background-color: #1c2431;
+  padding: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.navbar__logo img {
+  display: block;
+  height: 2rem;
+  width: auto;
+}
+
+.navbar__links a {
+  margin-left: 1rem;
+}
+
+.navbar__links a:hover {
+  text-decoration: underline;
+  font-weight: 700;
+}
+
+.footer {
+  margin: 2rem;
+  margin-top: 4rem;
+}
+
+.footer__contacts {
+  margin-top: 2rem;
+}
+
+.footer__contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 1rem 0;
+}
+
+.footer__icon {
+  margin-right: 1rem;
+}
+
+.footer__links p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 2rem 0;
+}
+
+.footer__links p a {
+  margin: 0.5rem 0;
+}
+
+.footer__links p a:hover {
+  text-decoration: underline;
+}
+
+.footer__social-links {
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
 .footer__social-links a {
@@ -36,11 +123,30 @@ a {
 
 .footer__social-links a img {
   height: auto;
-  width: 2rem;
+  width: 1.5rem;
 }
 
 .header {
   text-align: center;
+}
+
+.header__image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.header__title {
+  margin: 2rem;
+  font-size: 1.5rem;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+}
+
+.header__text {
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 2rem;
 }
 
 .header__image {
@@ -52,14 +158,220 @@ a {
   background-size: 100% auto;
 }
 
-.header__image img {
+.features {
+  margin: 2rem;
+}
+
+.features__icon img {
+  display: block;
+  height: 4rem;
+  width: auto;
+}
+
+.features__feature {
+  margin: 5rem auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.features__title {
+  margin: 1rem auto;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+}
+
+.features__text {
+  font-size: 1rem;
+}
+
+.productive__image img {
   display: block;
   width: 100%;
   height: auto;
 }
 
-.header__title {
-  margin-top: 2rem;
+.productive__title {
+  margin: 2rem;
+  font-size: 1.5rem;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+}
+
+.productive__text {
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 2rem;
+}
+
+.productive__link {
+  position: relative;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  margin-left: 2rem;
+  margin-bottom: 2rem;
+}
+
+.productive__link::after {
+  content: "";
+  background-color: #65e2d9;
+  position: absolute;
+  height: 0.1rem;
+  width: 100%;
+  bottom: -0.4rem;
+  left: 0;
+}
+
+.productive__link a {
+  color: #65e2d9;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.productive__link a span {
+  margin-left: 0.5rem;
+}
+
+.productive__link a span img {
+  display: block;
+  width: 1.2rem;
+  height: auto;
+}
+
+.testimonials {
+  margin: 10rem 3rem;
+}
+
+.testimonials::before {
+  content: url("../images/bg-quotes.png");
+  position: relative;
+  top: 2.5rem;
+}
+
+.testimonials__entry {
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background-color: #202a3c;
+  border-radius: 0.5rem;
+}
+
+.testimonials__text {
+  opacity: 0.8;
+  font-size: 0.9rem;
+}
+
+.testimonials__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1rem 0;
+}
+
+.testimonials__photo {
+  margin-right: 1rem;
+}
+
+.testimonials__photo img {
+  display: block;
+  width: 2rem;
+  height: auto;
+  border-radius: 50%;
+}
+
+.testimonials__name {
+  font-size: 1rem;
+}
+
+.testimonials__job-title {
+  opacity: 0.8;
+  font-size: 0.9rem;
+}
+
+.access {
+  margin: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  padding: 1.5rem;
+  background-color: #202a3c;
+  border-radius: 0.5rem;
+}
+
+.access__title {
+  margin: 1rem;
+  font-size: 1.5rem;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+}
+
+.access__text {
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 1rem;
+}
+
+.access__email-input {
+  padding: 1rem;
+  width: 100%;
+  margin: 1rem 0;
+  background-color: white;
+  border-radius: 5rem;
+  border: none;
+}
+
+.access__email-input::-webkit-input-placeholder {
+  opacity: 0.5;
+  padding-left: 2rem;
+}
+
+.access__email-input:-ms-input-placeholder {
+  opacity: 0.5;
+  padding-left: 2rem;
+}
+
+.access__email-input::-ms-input-placeholder {
+  opacity: 0.5;
+  padding-left: 2rem;
+}
+
+.access__email-input::placeholder {
+  opacity: 0.5;
+  padding-left: 2rem;
+}
+
+.access__btn {
+  padding: 1rem;
+  width: 100%;
+  max-width: 100%;
+  margin: 1rem 0;
+}
+
+.access__error {
+  color: #ff4242;
 }
 
 body {

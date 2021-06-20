@@ -1,0 +1,31 @@
+.productive {
+  @include imageTitleText;
+  &__link {
+    position: relative;
+    max-width: fit-content;
+    margin-left: 2rem;
+    margin-bottom: 2rem;
+    &::after {
+      content: "";
+      background-color: $accent-cyan;
+      position: absolute;
+      height: 0.1rem;
+      width: 100%;
+      bottom: -0.4rem;
+      left: 0;
+    }
+    a {
+      color: $accent-cyan;
+      display: flex;
+      align-items: center;
+      span {
+        margin-left: 0.5rem;
+        img {
+          display: block;
+          width: 1.2rem;
+          height: auto;
+        }
+      }
+    }
+  }
+}
