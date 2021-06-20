@@ -13,6 +13,16 @@ a {
   color: inherit;
 }
 
+.navbar {
+  background-color: #1c2431;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 .footer__social-links a {
   margin: 0.5rem;
   -webkit-filter: invert(100%);
@@ -27,6 +37,29 @@ a {
 .footer__social-links a img {
   height: auto;
   width: 2rem;
+}
+
+.header {
+  text-align: center;
+}
+
+.header__image {
+  margin-bottom: -4rem;
+  background-color: #1c2431;
+  background-image: url("../images/bg-curvy-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  background-size: 100% auto;
+}
+
+.header__image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.header__title {
+  margin-top: 2rem;
 }
 
 body {

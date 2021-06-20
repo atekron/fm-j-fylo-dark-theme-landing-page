@@ -1,0 +1,20 @@
+.header {
+  text-align: center;
+  &__image {
+    margin-bottom: -4rem;
+    background-color: $bg-intro;
+    background-image: url("../images/bg-curvy-mobile.svg");
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-size: 100% auto;
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__title {
+    margin-top: 2rem;
+  }
+}
