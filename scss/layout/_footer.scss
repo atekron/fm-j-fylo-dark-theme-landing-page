@@ -1,0 +1,15 @@
+.footer {
+  &__social-links {
+    a {
+      margin: 0.5rem;
+      filter: invert(100%);
+      &:hover {
+        filter: invert(80%);
+      }
+      img {
+        height: auto;
+        width: 2rem;
+      }
+    }
+  }
+}

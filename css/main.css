@@ -13,6 +13,22 @@ a {
   color: inherit;
 }
 
+.footer__social-links a {
+  margin: 0.5rem;
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
+}
+
+.footer__social-links a:hover {
+  -webkit-filter: invert(80%);
+          filter: invert(80%);
+}
+
+.footer__social-links a img {
+  height: auto;
+  width: 2rem;
+}
+
 body {
   font-size: 14px;
   font-family: "Open Sans", sans-serif;
