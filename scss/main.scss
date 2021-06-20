@@ -1,0 +1,11 @@
+@import "./abstracts/resets";
+@import "./base/typography";
+@import "./abstracts/variables";
+
+body {
+  font-size: 14px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  background-color: $bg-main;
+  color: white;
+}
