@@ -36,6 +36,8 @@ a {
 }
 
 .navbar {
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
   background-color: #1c2431;
   padding: 1rem;
   display: -webkit-box;
@@ -51,10 +53,29 @@ a {
       flex-wrap: wrap;
 }
 
+@media screen and (min-width: 750px) {
+  .navbar {
+    padding: 3rem 10%;
+  }
+}
+
 .navbar__logo img {
   display: block;
   height: 2rem;
   width: auto;
+}
+
+@media screen and (min-width: 750px) {
+  .navbar__logo img {
+    height: 3rem;
+  }
+}
+
+.navbar__links {
+  text-align: right;
+  min-width: -webkit-max-content;
+  min-width: -moz-max-content;
+  min-width: max-content;
 }
 
 .navbar__links a {
@@ -67,15 +88,85 @@ a {
 }
 
 .footer {
-  margin: 2rem;
-  margin-top: 4rem;
+  position: relative;
+  z-index: 0;
+  background-color: #0b1523;
+  padding: 2rem;
+  padding-top: 15rem;
+}
+
+@media screen and (min-width: 750px) {
+  .footer {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+  .footer__content {
+    margin-bottom: 4rem;
+    display: -ms-grid;
+    display: grid;
+    -webkit-column-gap: 2rem;
+            column-gap: 2rem;
+    -ms-grid-columns: 2fr 1fr 1fr 10rem;
+        grid-template-columns: 2fr 1fr 1fr 10rem;
+    -ms-grid-rows: 4rem 2rem auto 2rem;
+        grid-template-rows: 4rem 2rem auto 2rem;
+        grid-template-areas: "log ... ... ..." "loc pho lin soc" "loc ema lin ..." "... ... lin ...";
+  }
+  .footer__logo {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: log;
+    margin-bottom: 2rem;
+  }
+  .footer__location {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 1;
+    grid-area: loc;
+  }
+  .footer__phone {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    grid-area: pho;
+  }
+  .footer__email {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+    grid-area: ema;
+  }
+  .footer__links {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 3;
+    -ms-grid-column: 3;
+    grid-area: lin;
+    padding-top: 0;
+    margin-top: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .footer__links p {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .footer__social-links {
+    -ms-grid-row: 2;
+    -ms-grid-column: 4;
+    grid-area: soc;
+  }
 }
 
 .footer__contacts {
   margin-top: 2rem;
 }
 
-.footer__contact {
+.footer__location, .footer__phone, .footer__email {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -130,6 +221,10 @@ a {
   text-align: center;
 }
 
+.header__image {
+  max-width: 650px;
+}
+
 .header__image img {
   display: block;
   width: 100%;
@@ -137,16 +232,51 @@ a {
 }
 
 .header__title {
+  max-width: 650px;
   margin: 2rem;
   font-size: 1.5rem;
   font-family: "Raleway", sans-serif;
   font-weight: 700;
 }
 
+@media screen and (min-width: 750px) {
+  .header__title {
+    font-size: 2rem;
+  }
+}
+
 .header__text {
+  max-width: 650px;
   font-size: 1rem;
   font-weight: 400;
   margin: 2rem;
+}
+
+@media screen and (min-width: 750px) {
+  .header__text {
+    padding: 0 5rem;
+  }
+}
+
+@media screen and (min-width: 750px) {
+  .header {
+    background-color: #1c2431;
+    background-image: url("../images/bg-curvy-desktop.svg");
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-size: 100% auto;
+    padding-bottom: 10rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 .header__image {
@@ -158,8 +288,35 @@ a {
   background-size: 100% auto;
 }
 
+@media screen and (min-width: 750px) {
+  .header__image {
+    background-image: none;
+    background-color: unset;
+    margin-bottom: 2rem;
+  }
+}
+
 .features {
   margin: 2rem;
+}
+
+@media screen and (min-width: 750px) {
+  .features {
+    margin: 0 auto;
+    margin-top: -5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    max-width: 1080px;
+  }
 }
 
 .features__icon img {
@@ -169,6 +326,7 @@ a {
 }
 
 .features__feature {
+  max-width: 28rem;
   margin: 5rem auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -193,6 +351,10 @@ a {
   font-size: 1rem;
 }
 
+.productive__image {
+  max-width: 650px;
+}
+
 .productive__image img {
   display: block;
   width: 100%;
@@ -200,16 +362,68 @@ a {
 }
 
 .productive__title {
+  max-width: 650px;
   margin: 2rem;
   font-size: 1.5rem;
   font-family: "Raleway", sans-serif;
   font-weight: 700;
 }
 
+@media screen and (min-width: 750px) {
+  .productive__title {
+    font-size: 2rem;
+  }
+}
+
 .productive__text {
+  max-width: 650px;
   font-size: 1rem;
   font-weight: 400;
   margin: 2rem;
+}
+
+@media screen and (min-width: 750px) {
+  .productive__text {
+    padding: 0 5rem;
+  }
+}
+
+@media screen and (min-width: 750px) {
+  .productive {
+    padding: 3rem 10%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
+@media screen and (min-width: 750px) {
+  .productive__image {
+    padding-left: 4rem;
+  }
+}
+
+@media screen and (min-width: 750px) {
+  .productive__content {
+    padding-left: 4rem;
+  }
+}
+
+@media screen and (min-width: 750px) {
+  .productive__title {
+    max-width: 20rem;
+  }
+}
+
+@media screen and (min-width: 750px) {
+  .productive__text {
+    padding-left: 0;
+  }
 }
 
 .productive__link {
@@ -255,10 +469,33 @@ a {
   margin: 10rem 3rem;
 }
 
+@media screen and (min-width: 750px) {
+  .testimonials {
+    max-width: 1250px;
+    margin: 10rem auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
 .testimonials::before {
   content: url("../images/bg-quotes.png");
   position: relative;
   top: 2.5rem;
+}
+
+@media screen and (min-width: 750px) {
+  .testimonials::before {
+    top: 0;
+    left: 4rem;
+    z-index: 0;
+  }
 }
 
 .testimonials__entry {
@@ -266,6 +503,13 @@ a {
   padding: 1.5rem;
   background-color: #202a3c;
   border-radius: 0.5rem;
+}
+
+@media screen and (min-width: 750px) {
+  .testimonials__entry {
+    max-width: 22rem;
+    z-index: 10;
+  }
 }
 
 .testimonials__text {
@@ -319,6 +563,26 @@ a {
   padding: 1.5rem;
   background-color: #202a3c;
   border-radius: 0.5rem;
+  margin-bottom: -10rem;
+  position: relative;
+  z-index: 10;
+}
+
+@media screen and (min-width: 750px) {
+  .access {
+    margin: 2rem auto;
+    margin-bottom: -10rem;
+    max-width: 960px;
+  }
+}
+
+@media screen and (min-width: 750px) {
+  .access__form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+  }
 }
 
 .access__title {
@@ -328,10 +592,22 @@ a {
   font-weight: 700;
 }
 
+@media screen and (min-width: 750px) {
+  .access__title {
+    font-size: 2rem;
+  }
+}
+
 .access__text {
   font-size: 1rem;
   font-weight: 400;
   padding: 1rem;
+}
+
+@media screen and (min-width: 750px) {
+  .access__text {
+    padding: 1rem 5rem;
+  }
 }
 
 .access__email-input {
@@ -363,6 +639,12 @@ a {
   padding-left: 2rem;
 }
 
+@media screen and (min-width: 750px) {
+  .access__email-input {
+    margin-left: 3rem;
+  }
+}
+
 .access__btn {
   padding: 1rem;
   width: 100%;
@@ -370,8 +652,23 @@ a {
   margin: 1rem 0;
 }
 
+@media screen and (min-width: 750px) {
+  .access__btn {
+    width: 30rem;
+    margin: 1rem 3rem;
+  }
+}
+
 .access__error {
   color: #ff4242;
+}
+
+@media screen and (min-width: 750px) {
+  .access__error {
+    margin-left: 5rem;
+    margin-right: auto;
+    visibility: hidden;
+  }
 }
 
 body {

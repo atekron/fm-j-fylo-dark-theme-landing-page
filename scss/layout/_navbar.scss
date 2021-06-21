@@ -1,18 +1,27 @@
 .navbar {
+  transition: all 0.4s;
   background-color: $bg-intro;
   padding: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  @media screen and (min-width: $mediaBig) {
+    padding: 3rem 10%;
+  }
   &__logo {
     img {
       display: block;
       height: 2rem;
       width: auto;
+      @media screen and (min-width: $mediaBig) {
+        height: 3rem;
+      }
     }
   }
   &__links {
+    text-align: right;
+    min-width: max-content;
     a {
       margin-left: 1rem;
       &:hover {

@@ -1,5 +1,6 @@
 @mixin imageTitleText {
   &__image {
+    max-width: $contentMax;
     img {
       display: block;
       width: 100%;
@@ -8,15 +9,23 @@
   }
 
   &__title {
+    max-width: $contentMax;
     margin: 2rem;
     font-size: 1.5rem;
     font-family: "Raleway", sans-serif;
     font-weight: 700;
+    @media screen and (min-width: $mediaBig) {
+      font-size: 2rem;
+    }
   }
 
   &__text {
+    max-width: $contentMax;
     font-size: 1rem;
     font-weight: 400;
     margin: 2rem;
+    @media screen and (min-width: $mediaBig) {
+      padding: 0 5rem;
+    }
   }
 }

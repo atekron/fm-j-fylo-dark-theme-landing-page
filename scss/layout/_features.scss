@@ -1,5 +1,15 @@
 .features {
   margin: 2rem;
+  @media screen and (min-width: $mediaBig) {
+    margin: 0 auto;
+    margin-top: -5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1080px;
+  }
+
   &__icon {
     img {
       display: block;
@@ -9,6 +19,7 @@
   }
 
   &__feature {
+    max-width: 28rem;
     margin: 5rem auto;
     display: flex;
     flex-direction: column;

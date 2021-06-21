@@ -1,6 +1,17 @@
 .header {
   @include imageTitleText;
   text-align: center;
+  @media screen and (min-width: $mediaBig) {
+    background-color: $bg-intro;
+    background-image: url("../images/bg-curvy-desktop.svg");
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-size: 100% auto;
+    padding-bottom: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   &__image {
     margin-bottom: -4rem;
     background-color: $bg-intro;
@@ -8,5 +19,10 @@
     background-repeat: no-repeat;
     background-position: bottom left;
     background-size: 100% auto;
+    @media screen and (min-width: $mediaBig) {
+      background-image: none;
+      background-color: unset;
+      margin-bottom: 2rem;
+    }
   }
 }

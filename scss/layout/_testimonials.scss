@@ -1,10 +1,23 @@
 .testimonials {
   margin: 10rem 3rem;
 
+  @media screen and (min-width: $mediaBig) {
+    max-width: 1250px;
+    margin: 10rem auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
   &::before {
     content: url("../images/bg-quotes.png");
     position: relative;
     top: 2.5rem;
+    @media screen and (min-width: $mediaBig) {
+      top: 0;
+      left: 4rem;
+      z-index: 0;
+    }
   }
 
   &__entry {
@@ -12,6 +25,11 @@
     padding: 1.5rem;
     background-color: $bg-testimonials;
     border-radius: 0.5rem;
+
+    @media screen and (min-width: $mediaBig) {
+      max-width: 22rem;
+      z-index: 10;
+    }
   }
   &__text {
     opacity: 0.8;
