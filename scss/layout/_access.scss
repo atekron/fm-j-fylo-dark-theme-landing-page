@@ -70,10 +70,10 @@
 
   &__error {
     color: $accent-red;
+    visibility: hidden;
     @media screen and (min-width: $mediaBig) {
       margin-left: 5rem;
       margin-right: auto;
-      visibility: hidden;
     }
   }
 }
